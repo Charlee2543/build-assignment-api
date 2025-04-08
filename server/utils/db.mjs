@@ -1,10 +1,10 @@
 // Create PostgreSQL Connection Pool here !
-import * as pg from "pg";
+import * as pg from 'pg';
 const { Pool } = pg.default;
 
 const connectionPool = new Pool({
-  connectionString:
-    "postgresql://your-db-username:your-db-password@localhost:5432/your-db-name",
+   connectionString:
+      'postgresql://postgres:56789@localhost:5432/Assingment_Creating_dataAPI',
 });
 
 export default connectionPool;
