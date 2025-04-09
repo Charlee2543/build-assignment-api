@@ -35,9 +35,14 @@ app.post('/assignments', async (req, res) => {
          newAssignment.category
       ) {
          await connectionPool.query(
-            `insert into assignments (title,content,category) 
-            values($1,$2,$3)`,
-            [newAssignment.title, newAssignment.content, newAssignment.category]
+            `insert into assignments (title,content,category,published_at) 
+            values($1,$2,$3,$4)`,
+            [
+               newAssignment.title,
+               newAssignment.content,
+               newAssignment.category,
+               newAssignment.published_at,
+            ]
          );
 
          return res
